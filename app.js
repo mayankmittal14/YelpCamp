@@ -49,7 +49,7 @@ app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(mongoSanitize())
 
-const secret = process.env.SECRET || 'hiddenSecret';
+const secret = process.env.SECRET;// || 'hiddenSecret';
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
