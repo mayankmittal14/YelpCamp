@@ -53,6 +53,7 @@ const secret = process.env.SECRET;// || 'hiddenSecret';
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
+//    secret,
     touchAfter: 24 * 60 * 60
 });
 
